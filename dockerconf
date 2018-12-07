@@ -1,0 +1,8 @@
+PORTS= -p 8080:8080
+PORTS+= -p 50000:50000
+VOLS= -v pwd/home:/var/jenkins_home
+#VOLS+=  -v /home/jijeesh/git/automaterz/ai/jenkins/home/jobs:/var/jenkins_home/jobs/
+#VOLS+=  -v /home/jijeesh/git/automaterz/ai/jenkins/home/plugins:/var/jenkins_home/plugins/
+#VOLS+= -v /home/jijeesh/git/automaterz/ai/jenkins/home/m2deps:/var/jenkins_home/.m2/repository/
+OPTIONS= -d --memory=2g
+ENV= --env SONARQUBE_HOST=http://172.17.0.1:9000
